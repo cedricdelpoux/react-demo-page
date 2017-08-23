@@ -20,6 +20,7 @@ const footer = {
 
 const Demo = () =>
   <ReactDemoPage
+    basename={pkg.name}
     header={header}
     footer={footer}
     pages={routes}

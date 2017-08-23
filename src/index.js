@@ -1,10 +1,10 @@
 import PropTypes from "prop-types"
 import React, {Component} from "react"
-import {BrowserRouter} from "react-router-dom"
-import * as variables from "./variables.js"
-import styled, {injectGlobal} from "styled-components"
 import {loadEditorTheme} from "react-interactive-component"
+import {BrowserRouter} from "react-router-dom"
+import styled, {injectGlobal} from "styled-components"
 
+import * as variables from "./variables.js"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Nav from "./components/Nav"
@@ -69,9 +69,9 @@ class ReactDemoPage extends Component {
   }
 
   render() {
-    const {color, pages, footer, header} = this.props
+    const {basename, color, pages, footer, header} = this.props
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <div>
           {header && <Header {...header} color={color} />}
           <Nav routes={pages} color={color} />
@@ -86,6 +86,7 @@ class ReactDemoPage extends Component {
 }
 
 ReactDemoPage.propTypes = {
+  basename: PropTypes.string,
   header: PropTypes.shape({
     buttons: PropTypes.arrayOf(
       PropTypes.shape({
@@ -117,6 +118,7 @@ ReactDemoPage.propTypes = {
 }
 
 ReactDemoPage.defaultProps = {
+  basename: null,
   color: variables.mainColor,
   footer: null,
   header: null,

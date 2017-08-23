@@ -1,21 +1,14 @@
 {
   "name": "react-demo-page",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "author": {
     "name": "Cédric Delpoux",
     "email": "xuopled@gmail.com"
   },
   "description": "Build a demo page for your react component with ease",
-  "files": [
-    "css",
-    "es",
-    "lib",
-    "umd"
-  ],
+  "files": ["css", "es", "lib", "umd"],
   "homepage": "https://github.com/xuopled/react-demo-page#readme",
-  "keywords": [
-    "react-component"
-  ],
+  "keywords": ["react-component"],
   "license": "MIT",
   "main": "lib/index.js",
   "module": "es/index.js",

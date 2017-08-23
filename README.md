@@ -77,6 +77,7 @@ const footer = {
 
 const Demo = () =>
   <ReactDemoPage
+    basename={pkg.name} // You need this if you deploy on Github page
     header={header}
     footer={footer}
     pages={routes}
