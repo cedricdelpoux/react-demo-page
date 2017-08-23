@@ -13,7 +13,7 @@ const Wrapper = styled.nav`
   font-weight: 300;
   height: 100%;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   transition: all 0.3s ease;
   padding-top: 75px;
 
@@ -38,7 +38,7 @@ const Toggle = styled(NavToggle)`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
 `
 
 const StyledLink = styled(Link)`
