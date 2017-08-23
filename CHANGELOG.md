@@ -3,3 +3,7 @@
 * Added: Page with html
 * Added: Page with html and demo 
 * Added: Custom page
+
+# 0.1.1 - 2017-08-23
+
+* Updated: Move styled-components to dependencies
