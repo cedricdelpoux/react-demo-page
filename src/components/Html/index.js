@@ -42,8 +42,7 @@ const Wrapper = styled.div`
   blockquote {
     padding: 0 1rem;
     margin-left: 0;
-    color: $blockquote-text-color;
-    border-left: 0.3rem solid $border-color;
+    border-left: 0.3rem solid ${variables.borderColor};
 
     > :first-child {
       margin-top: 0;
@@ -97,8 +96,9 @@ const Wrapper = styled.div`
   }
 `
 
-const Html = ({color, html}) =>
+const Html = ({color, html}) => (
   <Wrapper color={color} dangerouslySetInnerHTML={{__html: html}} />
+)
 
 Html.propTypes = {
   color: PropTypes.string.isRequired,

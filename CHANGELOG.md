@@ -15,3 +15,7 @@
 # 0.2.2 - 2017-08-23
 
 * Updated: set z-index nav behind code sections
+
+# 0.3.0 - 2017-11-08
+
+* Added: Export Html component

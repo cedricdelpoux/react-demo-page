@@ -9,6 +9,7 @@ import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Nav from "./components/Nav"
 import Routes from "./components/Routes"
+import Html from "./components/Html"
 
 injectGlobal`
   * {
@@ -125,3 +126,4 @@ ReactDemoPage.defaultProps = {
 }
 
 export default ReactDemoPage
+export {Html}
