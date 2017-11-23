@@ -1,14 +1,20 @@
 {
   "name": "react-demo-page",
-  "version": "0.3.0",
+  "version": "0.3.3",
   "author": {
     "name": "Cédric Delpoux",
     "email": "xuopled@gmail.com"
   },
   "description": "Build a demo page for your react component with ease",
-  "files": ["css", "es", "lib", "umd"],
+  "files": [
+    "es",
+    "lib",
+    "umd"
+  ],
   "homepage": "https://github.com/xuopled/react-demo-page#readme",
-  "keywords": ["react-component"],
+  "keywords": [
+    "react-component"
+  ],
   "license": "MIT",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -24,6 +30,7 @@
     "demo:start": "nwb serve-react-demo",
     "lint": "eslint src demo/src",
     "precommit": "lint-staged",
+    "prepublish": "yarn run build",
     "test": "jest --config jest.config.json --colors --no-cache",
     "test:watch": "npm test -- --watch"
   },
@@ -61,7 +68,7 @@
     "react-test-renderer": "^15.6.1"
   },
   "peerDependencies": {
-    "react": "^15.6.0",
-    "react-dom": "^15.6.0"
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
   }
 }

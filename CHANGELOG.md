@@ -19,3 +19,7 @@
 # 0.3.0 - 2017-11-08
 
 * Added: Export Html component
+
+# 0.3.3 - 2017-11-23
+
+* Updated: Add prepublish script
