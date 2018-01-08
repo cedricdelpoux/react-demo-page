@@ -1,6 +1,5 @@
 import React from "react"
 import ReactSvgLineChart from "react-svg-line-chart"
-import "react-svg-line-chart/lib/index.css"
 
 import demoHtml from "./demo.md"
 import readmeHtml from "../../README.md"
