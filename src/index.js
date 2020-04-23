@@ -1,17 +1,17 @@
 import PropTypes from "prop-types"
-import React, {Component} from "react"
-import {loadEditorTheme} from "react-interactive-component"
-import {BrowserRouter} from "react-router-dom"
-import styled, {injectGlobal} from "styled-components"
-
-import * as variables from "./variables.js"
+import React, { Component } from "react"
+import { loadEditorTheme } from "react-interactive-component"
+import { BrowserRouter } from "react-router-dom"
+import styled, { createGlobalStyle } from "styled-components"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
+import Html from "./components/Html"
 import Nav from "./components/Nav"
 import Routes from "./components/Routes"
-import Html from "./components/Html"
+import * as variables from "./variables.js"
 
-injectGlobal`
+
+const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
@@ -74,6 +74,7 @@ class ReactDemoPage extends Component {
     return (
       <BrowserRouter basename={basename}>
         <div>
+          <GlobalStyle />
           {header && <Header {...header} color={color} />}
           <Nav routes={pages} color={color} />
           <Container>
@@ -126,4 +127,5 @@ ReactDemoPage.defaultProps = {
 }
 
 export default ReactDemoPage
-export {Html}
+export { Html }
+

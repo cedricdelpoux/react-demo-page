@@ -1,11 +1,11 @@
 import PropTypes from "prop-types"
-import React, {Component} from "react"
-import {Link} from "react-router-dom"
+import React, { Component } from "react"
+import { Link } from "react-router-dom"
 import styled from "styled-components"
-
 import * as variables from "../../variables.js"
+import { StyledButton } from "../Button"
 import NavToggle from "../NavToggle"
-import {StyledButton} from "../Button"
+
 
 const Wrapper = styled.nav`
   background: ${({color}) => color};
@@ -47,7 +47,7 @@ const StyledLink = styled(Link)`
   color: #fff;
 `
 
-const NavButton = StyledButton.withComponent("div").extend`
+const NavButton = styled(StyledButton).attrs({as:"div"})`
 border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 `
 

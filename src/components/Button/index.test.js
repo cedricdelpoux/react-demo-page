@@ -1,6 +1,9 @@
-import {mount} from "enzyme"
-import React from "react"
-import Button from "./index"
+import { configure, mount } from "enzyme";
+import Adapter from 'enzyme-adapter-react-16';
+import React from "react";
+import Button from "./index";
+
+configure({ adapter: new Adapter() });
 
 const ButtonFixture = (
   <Button>

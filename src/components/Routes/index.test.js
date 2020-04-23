@@ -1,8 +1,11 @@
-import {mount, shallow} from "enzyme"
+import { configure, mount, shallow } from "enzyme"
+import Adapter from 'enzyme-adapter-react-16'
 import React from "react"
-import {BrowserRouter, Route} from "react-router-dom"
-import Routes from "./index"
+import { BrowserRouter, Route } from "react-router-dom"
 import * as variables from "../../variables.js"
+import Routes from "./index"
+
+configure({ adapter: new Adapter() });
 
 const routes = [
   {

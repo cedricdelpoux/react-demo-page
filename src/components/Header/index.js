@@ -2,9 +2,9 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import * as variables from "../../variables.js"
-
+import { StyledButton } from "../Button"
 import OctocatCorner from "../OctocatCorner"
-import {StyledButton} from "../Button"
+
 
 const Container = styled.div`
   color: #fff;
@@ -47,7 +47,7 @@ const Title = styled.div`
 
 const Buttons = styled.div`margin-top: 1rem;`
 
-const NavButton = StyledButton.extend`
+const NavButton = styled(StyledButton)`
   border: 1px solid rgba(255, 255, 255, 0.2);
   text-decoration: none;
   display: inline-block;

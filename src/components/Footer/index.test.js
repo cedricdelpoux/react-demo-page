@@ -1,9 +1,13 @@
-import {mount} from "enzyme"
-import React from "react"
-import Footer from "./index"
-import * as variables from "../../variables.js"
+import { configure, mount } from "enzyme";
+import Adapter from 'enzyme-adapter-react-16';
+import React from "react";
+import pkg from "../../../package.json";
+import * as variables from "../../variables.js";
+import Footer from "./index";
 
-import pkg from "../../../package.json"
+
+configure({ adapter: new Adapter() });
+
 
 const FooterFixture = <Footer author={pkg.author} color={variables.mainColor} />
 
