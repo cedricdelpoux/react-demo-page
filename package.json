@@ -29,16 +29,18 @@
     "deploy": "gh-pages -d demo/dist",
     "lint": "eslint src demo/src",
     "precommit": "lint-staged",
-    "prepublish": "yarn run clean && yarn run build",
+    "prepublish": "yarn run snyk-protect && yarn run clean && yarn run build",
     "start": "nwb serve-react-demo --port 1190",
     "test": "jest --colors --no-cache",
-    "test:watch": "yarn test -- --watch"
+    "test:watch": "yarn test -- --watch",
+    "snyk-protect": "snyk protect"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
     "react-interactive-component": "^0.1.4",
     "react-router-dom": "^5.1.2",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -70,5 +72,6 @@
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
-  }
+  },
+  "snyk": true
 }
